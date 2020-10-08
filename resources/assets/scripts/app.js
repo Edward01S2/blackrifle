@@ -4,12 +4,14 @@
 import 'jquery';
 import 'alpinejs';
 import 'lity';
-import Swiper from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 import Flickity from 'flickity';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+Swiper.use([Navigation]);
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -21,6 +23,11 @@ $(document).ready(() => {
     loopedSlide: 1,
     grabCursor: true,
     centeredSlides: true,
+    preventClicks: false,
+    navigation: {
+      nextEl: '.swiper-next',
+      prevEl: '.swiper-prev',
+    }
   });
   // if($('.coffee-slider').length) {
   //   var flkty = new Flickity('.coffee-slider', {
@@ -90,6 +97,15 @@ $(document).ready(() => {
     e.preventDefault();
     gsap.to(window, {duration: 2, scrollTo: {y: 0}});
   });
+
+  gsap.fromTo(".stars", {
+    rotation: 0
+    }, {
+    rotation: 360,
+    duration: 60,
+    repeat: -1,
+    ease: "none",
+  })
 
   const navLinks = gsap.utils.toArray("nav .nav-link");
   //console.log(navLinks);

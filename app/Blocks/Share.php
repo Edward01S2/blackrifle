@@ -5,21 +5,21 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Social extends Block
+class Share extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Social';
+    public $name = 'Share';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'A simple Social block.';
+    public $description = 'A simple Share block.';
 
     /**
      * The block category.
@@ -122,7 +122,7 @@ class Social extends Block
             'title' => get_field('title'),
             'mobile' => get_field('mobile title'),
             'logo' => get_field('logo'),
-            'gallery' => get_field('share'),
+            'share' => $this->share(),
             'site' => \site_url(),
         ];
     }
@@ -134,15 +134,17 @@ class Social extends Block
      */
     public function fields()
     {
-        $social = new FieldsBuilder('social');
+        $share = new FieldsBuilder('share');
 
-        $social
+        $share
             ->addText('title')
             ->addText('mobile title')
             ->addImage('logo')
-            ->addGallery('share');
+            ->addRelationship('share', [
+                'post_type' => 'social'
+            ]);
 
-        return $social->build();
+        return $share->build();
     }
 
     /**
@@ -150,9 +152,19 @@ class Social extends Block
      *
      * @return array
      */
-    public function items()
+    public function share()
     {
-        return get_field('items') ?: $this->example['items'];
+        $posts = get_field('share');
+        $data = [];
+        foreach($posts as $post) : 
+            $data[] = [
+                'title' => ($title = get_field('title', $post->ID)) ? $title : '',
+                'link' => get_permalink($post->ID),
+                'img' => get_field('image', $post->ID)['url'],
+            ];
+        endforeach;
+
+        return $data;
     }
 
     /**
