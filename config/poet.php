@@ -13,17 +13,17 @@ return [
     */
 
     'post' => [
-        'social' => [
-            'enter_title_here' => 'Enter social title',
-            'menu_icon' => 'dashicons-share',
-            'supports' => ['title'],
-            'show_in_rest' => true,
-            'has_archive' => false,
-            'labels' => [
-                'singular' => 'Social',
-                'plural' => 'Social',
-            ],
-        ],
+        // 'social' => [
+        //     'enter_title_here' => 'Enter social title',
+        //     'menu_icon' => 'dashicons-share',
+        //     'supports' => ['title'],
+        //     'show_in_rest' => true,
+        //     'has_archive' => false,
+        //     'labels' => [
+        //         'singular' => 'Social',
+        //         'plural' => 'Social',
+        //     ],
+        // ],
     ],
 
     /*
