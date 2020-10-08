@@ -3,7 +3,7 @@
     <div class="flex flex-col px-4 py-12 md:py-16 lg:grid lg:grid-cols-3">
 
       <div class="mb-8 text-center lg:mb-0 lg:flex lg:items-center">
-        <a class="text-lg font-semibold tracking-wider text-white uppercase hover:text-c-red-100 md:text-2xl lg:text-lg " href="{!! $link['url'] !!}">{!! $link['title'] !!}</a>
+        <a class="text-lg font-semibold tracking-wider text-white uppercase hover:text-c-red-100 md:text-2xl lg:text-lg " href="{!! $link['url'] !!}" target="_blank">{!! $link['title'] !!}</a>
       </div>
 
       <div class="hidden lg:block">
