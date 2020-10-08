@@ -161,3 +161,31 @@
 .return-top {
   @apply xl:bg-c-red-100 xl:text-white xl:px-8 xl:py-3 xl:font-bold xl:hover:text-white xl:hover:bg-c-red-200;
 }
+
+.sti[style] {
+  @apply w-full h-full top-auto left-auto !important;
+}
+
+.sti-share-box {
+  @apply bottom-0 right-0 flex items-center space-x-2 mr-4 mb-4 lg:mr-6 lg:mb-6 !important;
+}
+
+.sti-btn {
+  @apply w-12 h-12 !important;
+  svg {
+    @apply w-12 h-12 left-auto top-auto m-0 !important;
+    &:hover {
+      fill: #E1261D !important;
+    }
+  }
+  &.sti-twitter-btn {
+    @apply bg-transparent mt-1 !important;
+  }
+}
+
+.sti-facebook-btn {
+  @apply bg-transparent !important;
+  svg {
+    @apply p-1 !important;
+  }
+}

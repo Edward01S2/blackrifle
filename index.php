@@ -4,14 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <?php 
-    if(is_singular('social')) : ?>
-      <!-- <meta property="og:image" content="<?php echo get_field('image')['url'] ?>">; -->
-      <meta property="og:url" content="<?php echo site_url(); ?>">
-      <meta name="twitter:card" content="summary_large_image">
-    <?php 
-    endif;
-    ?>
     <?php wp_head(); ?>
     <?php echo get_field('header_scripts', 'option'); ?>
   </head>

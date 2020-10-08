@@ -17,6 +17,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 $(document).ready(() => {
 
+
   const swiper = new Swiper('.coffee-slider', {
     loop: true,
     slidesPerView: 'auto',

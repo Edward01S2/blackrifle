@@ -122,7 +122,9 @@ class Share extends Block
             'title' => get_field('title'),
             'mobile' => get_field('mobile title'),
             'logo' => get_field('logo'),
-            'share' => $this->share(),
+            'share' => get_field('social'),
+            'stitle' => get_field('social title'),
+            'sdesc' => get_field('social description'),
             'site' => \site_url(),
         ];
     }
@@ -140,9 +142,9 @@ class Share extends Block
             ->addText('title')
             ->addText('mobile title')
             ->addImage('logo')
-            ->addRelationship('share', [
-                'post_type' => 'social'
-            ]);
+            ->addText('social title')
+            ->addTextarea('social description')
+            ->addGallery('social');
 
         return $share->build();
     }
@@ -152,20 +154,20 @@ class Share extends Block
      *
      * @return array
      */
-    public function share()
-    {
-        $posts = get_field('share');
-        $data = [];
-        foreach($posts as $post) : 
-            $data[] = [
-                'title' => ($title = get_field('title', $post->ID)) ? $title : '',
-                'link' => get_permalink($post->ID),
-                'img' => get_field('image', $post->ID)['url'],
-            ];
-        endforeach;
+    // public function share()
+    // {
+    //     $posts = get_field('share');
+    //     $data = [];
+    //     foreach($posts as $post) : 
+    //         $data[] = [
+    //             'title' => ($title = get_field('title', $post->ID)) ? $title : '',
+    //             'link' => get_permalink($post->ID),
+    //             'img' => get_field('image', $post->ID)['url'],
+    //         ];
+    //     endforeach;
 
-        return $data;
-    }
+    //     return $data;
+    // }
 
     /**
      * Assets to be enqueued when rendering the block.
