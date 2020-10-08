@@ -122,7 +122,7 @@ class Signup extends Block
     {
         return [
             'title' => get_field('title'),
-            'mobile' => get_field('mobile title'),
+            // 'mobile' => get_field('mobile title'),
             'content' => get_field('content'),
             'form' => get_field('gravity'),
         ];
@@ -139,7 +139,7 @@ class Signup extends Block
 
         $signup
             ->addText('title')
-            ->addText('mobile title')
+            // ->addText('mobile title')
             ->addWysiwyg('content')
             ->addFields($this->get(Form::class));
 

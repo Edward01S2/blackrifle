@@ -113,7 +113,7 @@ class hero extends Block
     {
         return [
             'pretitle' => get_field('pretitle'),
-            'mobile' => get_field('mobile pretitle'),
+            // 'mobile' => get_field('mobile pretitle'),
             'title' => get_field('title'),
             'content' => get_field('content'),
             'poster' => get_field('poster'),
@@ -133,7 +133,7 @@ class hero extends Block
 
         $hero
             ->addText('pretitle')
-            ->addText('mobile pretitle')
+            // ->addText('mobile pretitle')
             ->addText('title')
             ->addTextarea('content')
             ->addFile('video bg')

@@ -8,15 +8,15 @@
 
   <div class="container relative z-20 px-4 mx-auto sm:px-6 lg:px-8">
     <div class="pt-24 pb-40 text-center text-white lg:pt-32 lg:pb-48">
-      <div class="flex items-center justify-center mb-4 text-3xl tracking-wide text-c-gray-400 font-bebas md:space-x-4 lg:text-4xl lg:space-x-6 xl:text-5xl">
-        @svg('images.star', 'hidden w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
-        @svg('images.star', 'hidden w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
-        @svg('images.star', 'hidden w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
-        <div class="hidden md:block">{!! $pretitle !!}</div>
-        <div class="md:hidden">{!! $mobile !!}</div>
-        @svg('images.star', 'hidden w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
-        @svg('images.star', 'hidden w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
-        @svg('images.star', 'hidden w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
+      <div class="flex items-center justify-center mb-4 space-x-2 text-3xl tracking-wide text-c-gray-400 font-bebas md:space-x-4 lg:text-4xl lg:space-x-6 xl:text-5xl">
+        @svg('images.star', 'w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
+        @svg('images.star', 'w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
+        @svg('images.star', 'w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
+        <div>{!! $pretitle !!}</div>
+        {{-- <div>{!! $mobile !!}</div> --}}
+        @svg('images.star', 'w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
+        @svg('images.star', 'w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
+        @svg('images.star', 'w-4 h-4 fill-current text-white md:block lg:h-5 lg:w-5')
       </div>
       <h1 class="text-6xl tracking-wider uppercase font-bebas md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">{!! $title !!}</h1>
       <a class="inline-block p-4 mt-8 transition duration-200 bg-white rounded-full group hover:bg-c-red-100 hover:cursor-pointer" href="{!! $link !!}" data-lity>

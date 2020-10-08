@@ -120,7 +120,7 @@ class Share extends Block
     {
         return [
             'title' => get_field('title'),
-            'mobile' => get_field('mobile title'),
+            // 'mobile' => get_field('mobile title'),
             'logo' => get_field('logo'),
             'share' => get_field('social'),
             'stitle' => get_field('social title'),
@@ -140,7 +140,7 @@ class Share extends Block
 
         $share
             ->addText('title')
-            ->addText('mobile title')
+            // ->addText('mobile title')
             ->addImage('logo')
             ->addText('social title')
             ->addTextarea('social description')

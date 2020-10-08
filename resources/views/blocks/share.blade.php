@@ -1,9 +1,9 @@
 <div class="{{ $block->classes }}">
-  <div class="container px-4 pt-24 pb-16 mx-auto sm:px-6 lg:px-8 lg:pt-20">
-    <div>
+  <div class="container px-4 pt-16 pb-16 mx-auto sm:px-6 lg:px-8 lg:pt-20">
+    <div class="lg:max-w-4xl lg:mx-auto xl:max-w-5xl 2xl:max-w-6xl">
       <img class="hidden mx-auto lg:h-24 lg:mb-4 lg:block xl:mb-8" src="{!! $logo['url'] !!}" alt="">
-      <h2 class="mb-8 text-5xl text-center md:hidden text-c-blue-200 font-bebas">{!! $mobile !!}</h2>
-      <h2 class="hidden mb-4 text-5xl text-center text-c-blue-200 font-bebas md:mb-8 md:block lg:text-6xl lg:mb-16 xl:text-7xl">{!! $title !!}</h2>
+      {{-- <h2 class="mb-8 text-5xl text-center md:hidden text-c-blue-200 font-bebas">{!! $mobile !!}</h2> --}}
+      <h2 class="mb-8 text-5xl text-center text-c-blue-200 font-bebas md:mb-8 md:block lg:text-6xl lg:mb-16 xl:text-7xl">{!! $title !!}</h2>
     </div>
     <div class="grid gap-y-4 md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:gap-y-8 lg:gap-x-8 lg:max-w-4xl lg:mx-auto xl:max-w-5xl 2xl:max-w-6xl">
       @foreach($share as $item)
