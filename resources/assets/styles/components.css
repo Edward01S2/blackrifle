@@ -144,7 +144,7 @@
 
 .coffee-slider {
   .swiper-slide {
-    @apply w-64 md:w-72 lg:w-96;
+    @apply w-64 h-auto md:w-72 lg:w-96 !important;
     &:nth-child(odd) {
       .circle {
         @apply bg-c-blue-100;

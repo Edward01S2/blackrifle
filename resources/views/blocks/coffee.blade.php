@@ -9,7 +9,7 @@
   <div class="relative flex items-center outline-none coffee-slider swiper-container">
     <div class="swiper-wrapper">
       @foreach($coffee as $item)
-        <div class="swiper-slide">
+        <div class="flex flex-col swiper-slide">
           <div class="">
             <div class="relative">
               <img class="relative z-20 w-auto h-64 mx-auto md:h-72 lg:h-80" src="{!! $item['image']['url'] !!}" alt="">
@@ -17,11 +17,15 @@
               {{-- @svg('images.star_circle', 'stars fill-current text-white absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10') --}}
             </div>
           </div>
-          <div class="mt-4 text-center md:mt-8">
-            <h3 class="text-lg font-bold uppercase text-c-blue-200">{!! $item['title'] !!}</h3>
-            <div class="text-c-gray-1000">{!! $item['description'] !!}</div>
-            <div class="hidden md:block md:mt-8 md:pb-8">
-              <a class="z-30 inline-block px-8 py-2 font-bold uppercase bg-white hover:shadow-lg text-c-blue-100" href="{!! $item['link'] !!}" target="_blank">Buy</a>
+          <div class="flex flex-col flex-grow mt-4 text-center md:mt-8">
+            <div>
+              <h3 class="text-lg font-bold uppercase text-c-blue-200">{!! $item['title'] !!}</h3>
+              <div class="text-c-gray-1000">{!! $item['description'] !!}</div>
+            </div>
+            <div class="flex-grow hidden md:flex md:flex-col md:justify-end md:mt-8">
+              <div>
+                <a class="z-30 inline-block px-8 py-2 font-bold uppercase bg-white hover:shadow-lg text-c-blue-100" href="{!! $item['link'] !!}" target="_blank">Buy</a>
+              </div>
             </div>
           </div>
         </div>
