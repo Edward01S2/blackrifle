@@ -28,6 +28,7 @@ class Footer extends Composer
           'logo' => get_field('footer logo', 'options'),
           'nav' => $this->navigation('footer_navigation'),
           'link' => get_field('footer link', 'options'),
+          'logo_link' => get_field('logo link', 'options'),
         ];
     }
 

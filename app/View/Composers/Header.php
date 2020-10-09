@@ -26,6 +26,7 @@ class Header extends Composer
     {
         return [
           'logo' => get_field('Logo', 'options'),
+          'logo_link' => get_field('logo link', 'options'),
           'navigation' => $this->navigation(),
         ];
     }

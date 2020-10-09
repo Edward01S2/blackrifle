@@ -8,7 +8,7 @@
 
       <div class="hidden lg:block">
         <div class="lg:flex lg:items-center">
-          <a href="{{ home_url('/') }}" class="hover:opacity-50 lg:mx-auto">
+          <a href="{{ $logo_link }}" class="hover:opacity-50 lg:mx-auto">
             <img id="logo-main" class="w-20 h-20 xl:h-24 xl:w-24" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
           </a>
         </div>

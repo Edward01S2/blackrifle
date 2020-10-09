@@ -35,6 +35,7 @@ class ThemeSettings extends Field
             ->addTab('Logos')
                 ->addImage('Logo')
                 ->addImage('Logo Alt')
+                ->addUrl('logo link')
             ->addTab('Scripts')
                 ->addTextarea('header_scripts', [
                     'label' => 'Header Scripts',
