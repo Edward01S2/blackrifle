@@ -28,7 +28,7 @@
 
       <div class="flex-grow md:flex-grow-0">
         <div class="flex items-center flex-shrink-0 md:justify-center">
-          <a href="{{ $logo_link }}" class="hover:opacity-50">
+          <a href="{{ $logo_link }}" class="hover:opacity-50" target="_blank">
             <img id="logo-main" class="w-auto h-10 md:h-12 xl:h-16" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
           </a>
         </div>
